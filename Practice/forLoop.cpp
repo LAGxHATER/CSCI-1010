@@ -7,14 +7,23 @@ int main()
 {
     int n; 
     int i;
-    int sum;
+    int largest;
 
-    cout << "Enter 10 numbers: ";
-    cin >> n;
-
+    
     for(i = 1; i <= 10; i++)
     {
-        n += sum;
+        cout << "Enter a number: ";
         cin >> n;
+        if(i == 1)
+        {
+            n = largest;
+        }
+        else
+        {
+            if(n > largest)
+            {
+                largest = n;
+            }
+        }
     }
 }
