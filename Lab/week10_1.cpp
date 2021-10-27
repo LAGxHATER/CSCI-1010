@@ -11,7 +11,7 @@ int main(){
 
     char option; 
     int a;
-    int total; 
+    double total; 
 
     //loop
     while(true){
