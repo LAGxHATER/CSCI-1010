@@ -1,5 +1,8 @@
+//Noah Warren
+//CSCI 1010 002
+//Assignment 6, Problem 3
+//Let someone enter grades and return lowest, highest, and mean
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
 

@@ -1,3 +1,7 @@
+//Noah Warren
+//CSCI 1010 002
+//Assignment 6, Problem 2
+//Find riddler addresses that meet specific requirements
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -30,7 +34,7 @@ int main()
         
 
         //print address if it meets requirements
-        if((c * 3 == a) && (d == 1 || d == 3 || d == 5 || d == 7 || d == 9) && (a + b + c + d == 27))
+        if((c * 3 == a) && (d % 2 == 1) && (a + b + c + d == 27))
         {
             cout << "The Riddler will strike at: " << address << " Pennsylvania Avenue" << endl;  
             
