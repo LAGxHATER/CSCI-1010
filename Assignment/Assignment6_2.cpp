@@ -22,7 +22,7 @@ int main()
         //set value of address
         address = (a * 1000) + (b * 100) + (c * 10) + d;
 
-        //stop loop from repeating same outputs
+        //stop loop from repeating same outputs by seeing if address is anywhere in vector
         if(count(holdPrevAddress.begin(), holdPrevAddress.end(), address))
         {  
             break;
@@ -33,6 +33,8 @@ int main()
         if((c * 3 == a) && (d == 1 || d == 3 || d == 5 || d == 7 || d == 9) && (a + b + c + d == 27))
         {
             cout << "The Riddler will strike at: " << address << " Pennsylvania Avenue" << endl;  
+            
+            //adds value on the end of vector
             holdPrevAddress.push_back(address);
         } 
     }
