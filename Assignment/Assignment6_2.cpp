@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -7,8 +8,8 @@ int main()
 {
     //four digits
     int a, b, c, d;
-    int prevAddress;
     int address;
+    vector<int> holdPrevAddress (1);
 
     while(true)
     {
@@ -22,16 +23,17 @@ int main()
         address = (a * 1000) + (b * 100) + (c * 10) + d;
 
         //stop loop from repeating same outputs
-        if(address == prevAddress)
-        {
+        if(count(holdPrevAddress.begin(), holdPrevAddress.end(), address))
+        {  
             break;
         }
+        
 
         //print address if it meets requirements
         if((c * 3 == a) && (d == 1 || d == 3 || d == 5 || d == 7 || d == 9) && (a + b + c + d == 27))
         {
             cout << "The Riddler will strike at: " << address << " Pennsylvania Avenue" << endl;  
-            prevAddress = address;
+            holdPrevAddress.push_back(address);
         } 
     }
 }
