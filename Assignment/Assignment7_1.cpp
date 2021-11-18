@@ -52,6 +52,7 @@ int main()
     }
     arr[size - 1] = 15;
     arr[size - 2] = 10;
+
     //printing array after additions
     cout << "Now the elements are: ";
     printArray(arr, size);
@@ -70,6 +71,7 @@ int main()
             }
         }
     }
+
     //printing array after sort
     cout << "After sorting, the elements are: ";
     printArray(arr, size);
@@ -80,5 +82,7 @@ int main()
 void printArray(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
+    {
         cout << arr[i] << " ";
+    }
 }
